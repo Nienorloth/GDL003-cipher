@@ -7,20 +7,27 @@
   </head>
   <body>
     <div id="root">
-      <div id="intro"><!-- Aquí se elegirá un avatar, solo se mostrará una vez, antes de pantalla de inicio -->
-        <h1>Elige tu identidad secreta</h1>
-        <button id="owl" class="animals"><img src="imagenes/owl.JPG" height="115px" width="130px"/></button>
-        <button id="cat" class="animals"><img src="imagenes/gato.JPG" height="115px" width="130px"/></button>
-        <button id="butterfly" class="animals"><img src="imagenes/mariposa.JPG" height="115px" width="130px"/></button>
+      <div id="intro"><!--Aquí se elegirá un avatar, solo se mostrará una vez, antes de pantalla de menu. Hacker ed: insertar animación -->
+          <header>Elige tu identidad secreta</header>
+          <button id="owl" class="animals"><img src="imagenes/owl.JPG" height="115px" width="130px"/></button>
+          <button id="cat" class="animals"><img src="imagenes/gato.JPG" height="115px" width="130px"/></button>
+          <button id="butterfly" class="animals"><img src="imagenes/mariposa.JPG" height="115px" width="130px"/></button>
       </div>
-      <div id="tree-house"><!-- Pantalla de inicio para elegir acción (invitar amigos, enviar o descifrar mensaje) -->
-        <h1>Bienvenido a tu club secreto</h1>
+      <div id="tree-house"><!-- Pantalla de menu para elegir acción (invitar amigos, enviar o descifrar mensaje) -->
+        <header>Bienvenido a tu club secreto</header>
+        <nav>
+          
+        </nav>
       </div>
       <div id="inhouse" style="display:none"><!-- Invitar amigos (asignar avatar a nombre de amigos para definir offset), img fondo interior casita-->
+        <header> </header>
 
+        <footer> </footer>
       </div>
       <div id="mjs" style="display:none"><!-- pantalla para elegir avatar de amigo (offset), codificar y decodificar msjs -->
+        <header> </header>
 
+        <footer> </footer>
       </div>
     </div>
     <script src="cipher.js"></script>
