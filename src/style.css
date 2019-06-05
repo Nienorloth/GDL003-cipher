@@ -1,13 +1,11 @@
-#root {
-    
-}
-#intro {
+#intro{
 width: 1066px;
 height: 768;
 text-align: center;
 font-size: 30px;
 margin: auto;
 padding: 10%;
-border: 8px;
-border-color:black;
+}
+#offset{
+text-align: center;
 }

@@ -6,14 +6,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <div id="intro"><!--Aquí se elegirá un avatar, solo se mostrará una vez, antes de pantalla de menu. Hacker ed: insertar animación -->
+      <div id="intro" style="display:block"><!--Aquí se elegirá un avatar, solo se mostrará una vez, antes de pantalla de menu. Hacker ed: insertar animación -->
           <header>Elige tu identidad secreta</header>
           <button id="owl" class="animals"><img src="imagenes/owl.JPG" height="115px" width="130px"/></button>
           <button id="cat" class="animals"><img src="imagenes/gato.JPG" height="115px" width="130px"/></button>
-          <button id="butterfly" class="animals"><img src="imagenes/mariposa.JPG" height="115px" width="130px"/></button>
+          <button id="butter" class="animals"><img src="imagenes/mariposa.JPG" height="115px" width="130px"/></button>
       </div>
-      <div id="tree-house"><!-- Pantalla de menu para elegir acción (invitar amigos, enviar o descifrar mensaje) -->
+      <div id="tree-house" style="display:none"><!-- Pantalla de menu para elegir acción (invitar amigos, enviar o descifrar mensaje) -->
         <header>Bienvenido a tu club secreto</header>
         <nav>
           
@@ -24,12 +23,16 @@
 
         <footer> </footer>
       </div>
-      <div id="mjs" style="display:none"><!-- pantalla para elegir avatar de amigo (offset), codificar y decodificar msjs -->
-        <header> </header>
+      <div id="mjs" style="display:block"><!-- pantalla para elegir avatar de amigo (offset), codificar y decodificar msjs -->
+        <header id="offset">
+          <h1>¿A quién enviarás el mensaje secreto?</h1>
+            <button id="offowl" class="animals"><img src="imagenes/owl.JPG" height="115px" width="130px"/></button>
+            <button id="offcat" class="animals"><img src="imagenes/gato.JPG" height="115px" width="130px"/></button>
+            <button id="offbutter" class="animals"><img src="imagenes/mariposa.JPG" height="115px" width="130px"/></button>
+        </header>
 
         <footer> </footer>
       </div>
-    </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
