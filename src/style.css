@@ -52,18 +52,14 @@ textarea{
     height: 70px;
 }
 #rules{
-    width: 300px;
-    height:300px; 
-    padding: auto;
-    border: auto;
+    width: 600px;
+    height:100px; 
     margin-left: 50px;
+    margin-bottom: 10px;
 }
 #friendInvite{
     width: 300px;
     margin-left:60px;
-}
-#fsubmit{
-
 }
 #friendList{
     width: 400px;
@@ -106,4 +102,5 @@ textarea{
     width: 1340px;
     height: 600px;
     background-image: url("imagenes/inhouse.png");
+    background-size: 100%;
 }
