@@ -1,11 +1,109 @@
 #intro{
-width: 1066px;
-height: 768;
-text-align: center;
-font-size: 30px;
-margin: auto;
-padding: 10%;
+    width: 1066px;
+    height: 800;
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 10px;
+    background-image: url("imagenes/wood2.jpg");
+    background-repeat: no-repeat;
+    background-position: relative;
+    background-position-x: center;
+}
+.welcome{
+    position: relative;
+    bottom: 80px;
+}
+#choose{
+    position: relative;
+    top: 45px;
+}
+#introInvite{
+    position: relative;
+}
+#introWelcome{
+    position: relative;
+    top: 30px;
+}
+#introText{
+    padding: 2px;
+    margin: 0 auto;
+    border: auto;
+    border-width: 1px;
+    border-color: black;
 }
 #offset{
-text-align: center;
+    text-align: center;
+}
+textarea{
+    width: 1000px;
+    height: 90px;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+.submit{
+    margin-top: 8px;
+    margin-left: 600px;
+}
+.menu{
+    margin-left:1100px;
+    margin-top: 20px;
+    height: 70px;
+}
+#rules{
+    width: 300px;
+    height:300px; 
+    padding: auto;
+    border: auto;
+    margin-left: 50px;
+}
+#friendInvite{
+    width: 300px;
+    margin-left:60px;
+}
+#fsubmit{
+
+}
+#friendList{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50px;
+    left:600px;
+}
+#menu{
+    width: 1350px;
+    height: 626px;
+    background-color: #b0f4e6;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.mainButtons{
+    width: 507px;
+    height: 130px;
+    margin-top: 20px;
+    font-size: 35px;
+    background-image: url("imagenes/wood.jpg");
+    color: white;
+}
+#inviteScreen{
+    position: relative;
+    bottom: 500px;
+    left: 12px;
+}
+#codeScreen{
+    position: relative;
+    bottom: 480px;
+    left: 815px;
+}
+#decodeScreen{
+    position: relative;
+    bottom: 310px;
+    left: 305px;
+}
+#inhouse{
+    width: 1340px;
+    height: 600px;
+    background-image: url("imagenes/inhouse.png");
 }

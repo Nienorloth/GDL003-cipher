@@ -7,31 +7,48 @@
   </head>
   <body>
       <div id="intro" style="display:block"><!--Aquí se elegirá un avatar, solo se mostrará una vez, antes de pantalla de menu. Hacker ed: insertar animación -->
-          <header>Elige tu identidad secreta</header>
-          <button id="owl" class="animals"><img src="imagenes/owl.JPG" height="115px" width="130px"/></button>
-          <button id="cat" class="animals"><img src="imagenes/gato.JPG" height="115px" width="130px"/></button>
-          <button id="butter" class="animals"><img src="imagenes/mariposa.JPG" height="115px" width="130px"/></button>
+        <div class="welcome">
+          <section id="introText">
+            <h2 id="introWelcome">Bienvenido a tu club secreto</h2> 
+            <h3 id="introInvite">¡Invita amigos para enviarse mensajes secretos con códigos personalizados para cada uno de ellos!</h3>
+            <h1 id="choose">Elige tu identidad secreta</h1>
+            <button id="owl" class="animals"><img src="imagenes/owl.JPG" height="115px" width="130px"/></button>
+            <button id="cat" class="animals"><img src="imagenes/gato.JPG" height="115px" width="130px"/></button>
+            <button id="butter" class="animals"><img src="imagenes/mariposa.JPG" height="115px" width="130px"/></button>
+            <button id="parrot" class="animals"><img src="imagenes/loro.JPG" height="115px" width="130px"/></button>
+          </section>
+        </div> 
       </div>
-      <div id="tree-house" style="display:none"><!-- Pantalla de menu para elegir acción (invitar amigos, enviar o descifrar mensaje) -->
-        <header>Bienvenido a tu club secreto</header>
-        <nav>
-          
-        </nav>
+      <div id="menu" style="display:none"><!-- Pantalla de menu para elegir acción (invitar amigos, enviar o descifrar mensaje) -->
+        <img src="imagenes/treehouse.jpg">
+        <button id="inviteScreen" class="mainButtons">Invitar amigos</button>
+        <button id="codeScreen" class="mainButtons">Cifrar un mensaje para enviar</button>
+        <button id="decodeScreen" class="mainButtons">Descifrar un mensaje recibido</button>
       </div>
       <div id="inhouse" style="display:none"><!-- Invitar amigos (asignar avatar a nombre de amigos para definir offset), img fondo interior casita-->
-        <header> </header>
-
-        <footer> </footer>
+          <h2 id="rules">Agrega un amigo y elige una identidad secreta para él. Puedes agregar uno o dos amigos. Tendrás un código secreto para cada uno de ellos.</h3>
+          <input id="friendInvite" type="text" placeholder="Escribe aquí el nombre de tu amigo"></input>
+          <input id="fsubmit" type="submit" class="friend" value="Agregar amigo"></input>
+          <ul id="friendList"></ul>
+        <footer> 
+          <button id="menuB" class="menu">Volver al menú</button>
+        </footer>
       </div>
-      <div id="mjs" style="display:block"><!-- pantalla para elegir avatar de amigo (offset), codificar y decodificar msjs -->
+      <div id="mjs" style="display:none"><!-- pantalla para elegir avatar de amigo (offset), codificar y decodificar msjs -->
         <header id="offset">
-          <h1>¿A quién enviarás el mensaje secreto?</h1>
+          <h1 id="m1"></h1>
             <button id="offowl" class="animals"><img src="imagenes/owl.JPG" height="115px" width="130px"/></button>
             <button id="offcat" class="animals"><img src="imagenes/gato.JPG" height="115px" width="130px"/></button>
             <button id="offbutter" class="animals"><img src="imagenes/mariposa.JPG" height="115px" width="130px"/></button>
-        </header>
-
-        <footer> </footer>
+            <button id="offParrot" class="animals"><img src="imagenes/loro.JPG" height="115px" width="130px"/></button>
+          </header>
+        <textarea id="input" style="display:none"></textarea>
+        <input id="submit1" type="submit" class="submit" value="Cifrar" style="display:none"></input>
+        <textarea id="output" style="display:none"></textarea>
+        <input id="submit2" type="submit" class="submit" value="Copiar" style="display:none"></input>
+        <footer> 
+          <button id="menuB1" class="menu">Volver al menú</button>
+        </footer>
       </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
