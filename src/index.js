@@ -61,12 +61,12 @@ function backToMenu(){
     document.getElementById("output").value = " ";
 }
 function defineOffset(avatar){
-    console.log(avatar)
+    console.log(avatar);
     if (avatar === 1){
     offOwl.style.display="none";
     offCat.addEventListener("click", () => {
         y = 3;
-        console.log(y)
+        console.log(y);
         input.style.display="block";
         output.style.display="block";
         submit1.style.display="block";
@@ -76,7 +76,7 @@ function defineOffset(avatar){
         });
      offButter.addEventListener("click", () => {
         y = 5;
-        console.log(y)
+        console.log(y);
         input.style.display="block";
         output.style.display="block";
         submit1.style.display="block";
@@ -86,7 +86,7 @@ function defineOffset(avatar){
         });
     offParrot.addEventListener("click", () => {
         y = 7;
-        console.log(y)
+        console.log(y);
         input.style.display="block";
         output.style.display="block";
         submit1.style.display="block";
@@ -115,7 +115,7 @@ function defineOffset(avatar){
         offParrot.style.display="none";
         });
     offParrot.addEventListener("click", () => {
-        y = 4
+        y = 4;
         input.style.display="block";
         output.style.display="block";
         submit1.style.display="block";
@@ -230,7 +230,6 @@ function addFriend(){
     if (friends.length === 3){
         document.getElementById("fsubmit").disabled = true;
     }
-    let friendList = document.getElementById("friendList");
     let li = document.createElement("li");
     let node = document.createTextNode(name);
     li.appendChild(node);
@@ -242,4 +241,3 @@ function addFriend(){
     document.getElementById("friendInvite").value = " ";
     }
  }
-
