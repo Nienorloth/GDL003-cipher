@@ -4,6 +4,10 @@ const offOwl = document.getElementById("offowl");
 const offCat = document.getElementById("offcat");
 const offButter = document.getElementById("offbutter");
 const offParrot = document.getElementById("offParrot");
+const cifrar = document.getElementById("cifrar");
+const paraCifrar = document.getElementById("paraCifrar");
+const result = document.getElementById("result");
+const copiar = document.getElementById("ccopiar");
 
 function owlAvatar(){
     avatar = 1;
@@ -56,9 +60,6 @@ function backToMenu(){
         offOwl.style.display="inline"; 
         offButter.style.display="inline";
     }
-    document.getElementById("friendInvite").value = " ";
-    document.getElementById("input").value = " ";
-    document.getElementById("output").value = " ";
 }
 function defineOffset(avatar){
     console.log(avatar);
@@ -67,30 +68,30 @@ function defineOffset(avatar){
     offCat.addEventListener("click", () => {
         y = 3;
         console.log(y);
-        input.style.display="block";
-        output.style.display="block";
-        submit1.style.display="block";
-        submit2.style.display="block";
+        paraCifrar.style.display="block";
+        result.style.display="block";
+        cifrar.style.display="block";
+        copiar.style.display="block";
         offButter.style.display="none";
         offParrot.style.display="none";
         });
      offButter.addEventListener("click", () => {
         y = 5;
         console.log(y);
-        input.style.display="block";
-        output.style.display="block";
-        submit1.style.display="block";
-        submit2.style.display="block";
+        paraCifrar.style.display="block";
+        result.style.display="block";
+        cifrar.style.display="block";
+        copiar.style.display="block";
         offCat.style.display="none";
         offParrot.style.display="none";
         });
     offParrot.addEventListener("click", () => {
         y = 7;
         console.log(y);
-        input.style.display="block";
-        output.style.display="block";
-        submit1.style.display="block";
-        submit2.style.display="block";
+        paraCifrar.style.display="block";
+        result.style.display="block";
+        cifrar.style.display="block";
+        copiar.style.display="block";
         offCat.style.display="none";
         offButter.style.display="none";
     });
@@ -98,28 +99,28 @@ function defineOffset(avatar){
     offCat.style.display="none";
     offOwl.addEventListener("click", () => {
         y = 3;
-        input.style.display="block";
-        output.style.display="block";
-        submit1.style.display="block";
-        submit2.style.display="block";
+        paraCifrar.style.display="block";
+        result.style.display="block";
+        cifrar.style.display="block";
+        copiar.style.display="block";
         offButter.style.display="none";
         offParrot.style.display="none";
         });
      offButter.addEventListener("click", () => {
         y = 9;
-        input.style.display="block";
-        output.style.display="block";
-        submit1.style.display="block";
-        submit2.style.display="block";
+        paraCifrar.style.display="block";
+        result.style.display="block";
+        cifrar.style.display="block";
+        copiar.style.display="block";
         offOwl.style.display="none";
         offParrot.style.display="none";
         });
     offParrot.addEventListener("click", () => {
         y = 4;
-        input.style.display="block";
-        output.style.display="block";
-        submit1.style.display="block";
-        submit2.style.display="block";
+        paraCifrar.style.display="block";
+        result.style.display="block";
+        cifrar.style.display="block";
+        copiar.style.display="block";
         offOwl.style.display="none";
         offButter.style.display="none";
         });
@@ -127,28 +128,28 @@ function defineOffset(avatar){
     offButter.style.display="none";
     offOwl.addEventListener("click", () => {
         y = 5;
-        input.style.display="block";
-        output.style.display="block";
-        submit1.style.display="block";
-        submit2.style.display="block";
+        paraCifrar.style.display="block";
+        result.style.display="block";
+        cifrar.style.display="block";
+        copiar.style.display="block";
         offCat.style.display="none";
         offParrot.style.display="none";
         });
      offCat.addEventListener("click", () => {
         y = 9;
-        input.style.display="block";
-        output.style.display="block";
-        submit1.style.display="block";
-        submit2.style.display="block";
+        paraCifrar.style.display="block";
+        result.style.display="block";
+        cifrar.style.display="block";
+        copiar.style.display="block";
         offOwl.style.display="none";
         offParrot.style.display="none";
         });
     offParrot.addEventListener("click", () => {
         y = 6;
-        input.style.display="block";
-        output.style.display="block";
-        submit1.style.display="block";
-        submit2.style.display="block";
+        paraCifrar.style.display="block";
+        result.style.display="block";
+        cifrar.style.display="block";
+        copiar.style.display="block";
         offOwl.style.display="none";
         offCat.style.display="none";
         });
@@ -156,28 +157,28 @@ function defineOffset(avatar){
     offParrot.style.display="none";
     offOwl.addEventListener("click", () => {
         y = 7;
-        input.style.display="block";
-        output.style.display="block";
-        submit1.style.display="block";
-        submit2.style.display="block";
+        paraCifrar.style.display="block";
+        result.style.display="block";
+        cifrar.style.display="block";
+        copiar.style.display="block";
         offCat.style.display="none";
         offButter.style.display="none";
         });
      offCat.addEventListener("click", () => {
         y = 4;
-        input.style.display="block";
-        output.style.display="block";
-        submit1.style.display="block";
-        submit2.style.display="block";
+        paraCifrar.style.display="block";
+        result.style.display="block";
+        cifrar.style.display="block";
+        copiar.style.display="block";
         offOwl.style.display="none";
         offButter.style.display="none";
         });
     offButter.addEventListener("click", () => {
         y = 6;
-        input.style.display="block";
-        output.style.display="block";
-        submit1.style.display="block";
-        submit2.style.display="block";
+        paraCifrar.style.display="block";
+        result.style.display="block";
+        cifrar.style.display="block";
+        copiar.style.display="block";
         offOwl.style.display="none";
         offCat.style.display="none";
         });
@@ -185,29 +186,29 @@ function defineOffset(avatar){
     }
 }
 function codeScreen(){
-    submit1.value = "Cifrar";
+    cifrar.value = "Cifrar";
     document.getElementById("menu").style.display = "none";
     document.getElementById("mjs").style.display = "block";
     document.getElementById("m1").innerHTML = "¿A quién enviarás el mensaje cifrado?";
-    document.getElementById("input").placeholder = "Escribe aquí tu mensaje sin usar acentos ni la letra ñ";
-    document.getElementById("output").placeholder = "Aquí se mostrará tu mensaje descifrado";
-    submit1.addEventListener("click", () => {
-        let x = document.getElementById("input").value;
+    document.getElementById("paraCifrar").placeholder = "Escribe aquí tu mensaje sin usar acentos ni la letra ñ";
+    document.getElementById("result").placeholder = "Aquí se mostrará tu mensaje descifrado";
+    cifrar.addEventListener("click", () => {
+        let x = document.getElementById("paraCifrar").value;
         console.log(y);
-        document.getElementById("output").innerHTML = window.cipher.encode(x, y);
+        document.getElementById("result").innerHTML = window.cipher.encode(x, y);
     });  
  }
 function decodeScreen(){
-    submit1.value = "Descifrar";
+    cifrar.value = "Descifrar";
     document.getElementById("menu").style.display = "none";
     document.getElementById("mjs").style.display = "block";
     document.getElementById("m1").innerHTML = "¿Quién te envió el mensaje?";
-    document.getElementById("input").placeholder = "Escribe aquí tu mensaje cifrado";
-    document.getElementById("output").placeholder = "Aquí se mostrará tu mensaje descifrado";
-    submit1.addEventListener("click", () => {
-        let x = document.getElementById("input").value;
+    document.getElementById("paraCifrar").placeholder = "Escribe aquí tu mensaje cifrado";
+    document.getElementById("result").placeholder = "Aquí se mostrará tu mensaje descifrado";
+    cifrar.addEventListener("click", () => {
+        let x = document.getElementById("paraCifrar").value;
         console.log(y);
-        document.getElementById("output").innerHTML = window.cipher.decode(x, y);
+        document.getElementById("result").innerHTML = window.cipher.decode(x, y);
     });  
 }
 
@@ -223,12 +224,12 @@ document.getElementById("menuB1").addEventListener("click", backToMenu);
 
 function addFriend(){
     let friends = [];
-    document.getElementById("fsubmit").addEventListener("click", addF);
+    document.getElementById("friendAdd").addEventListener("click", addF);
     function addF(){
     let name = document.getElementById("friendInvite").value;
     friends.push({nombre: name, imagen:""});
     if (friends.length === 3){
-        document.getElementById("fsubmit").disabled = true;
+        document.getElementById("friendAdd").disabled = true;
     }
     let li = document.createElement("li");
     let node = document.createTextNode(name);

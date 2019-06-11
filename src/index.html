@@ -25,18 +25,18 @@
         <button id="codeScreen" class="mainButtons">Cifrar un mensaje para enviar</button>
         <button id="decodeScreen" class="mainButtons">Descifrar un mensaje recibido</button>
       </div>
-      <div id="inhouse" style="display:none"><!-- Invitar amigos (asignar avatar a nombre de amigos para definir offset), img fondo interior casita-->
-          <h2 id="rules">Agrega un amigo y elige una identidad secreta para él. Puedes agregar uno o dos amigos. Tendrás un código secreto para cada uno de ellos.</h3>
-          <input id="friendInvite" type="text" placeholder="Escribe aquí el nombre de tu amigo"></input>
-          <input id="fsubmit" type="submit" class="friend" value="Agregar amigo"></input>
+      <div id="inhouse" style="display:none"> <!-- Invitar amigos (asignar avatar a nombre de amigos para definir offset), img fondo interior casita-->
+          <h2 id="rules">Agrega un amigo y elige una identidad secreta para él. Puedes agregar uno o dos amigos. Tendrás un código secreto para cada uno de ellos.</h2>
+          <input id="friendInvite" type="text" placeholder="Escribe aquí el nombre de tu amigo">
+          <input id="friendAdd" type="submit" class="friend" value="Agregar amigo">
           <br>
-          <input type="radio" name="radioF" id="friend1">
+          <input type="radio" name="friendPic" id="friend1">
           <label for="friend1"><img src="imagenes/owl.JPG" height="90px" width="105px"/></label>
-          <input type="radio" name="radioF" id="friend2">
+          <input type="radio" name="friendPic" id="friend2">
           <label for="friend2"><img src="imagenes/gato.JPG" height="90px" width="105px"/></label>
-          <input type="radio" name="radioF" id="friend3">
+          <input type="radio" name="friendPic" id="friend3">
           <label for="friend3"><img src="imagenes/mariposa.JPG" height="90px" width="105px"/></label>
-          <input type="radio" name="radioF" id="friend4">
+          <input type="radio" name="friendPic" id="friend4">
           <label for="friend4"><img src="imagenes/loro.JPG" height="90px" width="105px"/></label>
           <ul id="friendList"></ul>
         <footer> 
@@ -51,10 +51,10 @@
             <button id="offbutter" class="animals"><img src="imagenes/mariposa.JPG" height="115px" width="130px"/></button>
             <button id="offParrot" class="animals"><img id="parrotPic" src="imagenes/loro.JPG" height="115px" width="130px"/></button>
           </header>
-        <textarea id="input" style="display:none"></textarea>
-        <input id="submit1" type="submit" class="submit" value="Cifrar" style="display:none"></input>
-        <textarea id="output" style="display:none"></textarea>
-        <input id="submit2" type="submit" class="submit" value="Copiar" style="display:none"></input>
+        <textarea id="paraCifrar" style="display:none"></textarea>
+        <input id="cifrar" type="submit" class="submit" value="Cifrar" style="display:none">
+        <textarea id="result" style="display:none"></textarea>
+        <input id="copiar" type="submit" class="submit" value="Copiar" style="display:none">
         <footer> 
           <button id="menuB1" class="menu">Volver al menú</button>
         </footer>
