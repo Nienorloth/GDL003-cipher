@@ -1,5 +1,5 @@
 let avatar = 0;
-let y = 0;
+let offset = 0;
 const offOwl = document.getElementById("offowl");
 const offCat = document.getElementById("offcat");
 const offButter = document.getElementById("offbutter");
@@ -7,38 +7,58 @@ const offParrot = document.getElementById("offParrot");
 const cifrar = document.getElementById("cifrar");
 const paraCifrar = document.getElementById("paraCifrar");
 const result = document.getElementById("result");
-const copiar = document.getElementById("ccopiar");
+const copiar = document.getElementById("copiar");
 
-function owlAvatar(){
+let owlAvatar = () => {
     avatar = 1;
     defineOffset(1);
     document.getElementById("intro").style.display = "none";
     document.getElementById("menu").style.display = "block";
 }
-function catAvatar(){
+let catAvatar = () => {
     avatar = 2;
     defineOffset(2);
     document.getElementById("intro").style.display = "none";
     document.getElementById("menu").style.display = "block";
 }
-function butterAvatar(){
+let butterAvatar = () => {
     avatar = 3;
     defineOffset(3);
     document.getElementById("intro").style.display = "none";
     document.getElementById("menu").style.display = "block";
 }
-function parrotAvatar(){
+let parrotAvatar = () => {
     avatar = 4;
     defineOffset(4);
     document.getElementById("intro").style.display = "none";
     document.getElementById("menu").style.display = "block";
 }
-function inviteScreen(){
+const inviteScreen = () => {
     document.getElementById("menu").style.display = "none";
     document.getElementById("inhouse").style.display = "block";
     addFriend();
+    let addFriend = () => {
+        let friends = [];
+        document.getElementById("friendAdd").addEventListener("click", addF);
+        let addF = () => {
+        let name = document.getElementById("friendInvite").value;
+        friends.push({nombre: name, imagen:""});
+        if (friends.length === 3){
+            document.getElementById("friendAdd").disabled = true;
+        }
+        let li = document.createElement("li");
+        let node = document.createTextNode(name);
+        li.appendChild(node);
+        document.getElementById("friendList").appendChild(li);
+        //.getElementById("friendList").innerHTML ="Tus amigos:<br>" + document.getElementById("friendInvite").value + "</br>";
+        erase();
+        }
+       let erase = () => {
+        document.getElementById("friendInvite").value = " ";
+        }
+     }
 }
-function backToMenu(){
+let backToMenu = () => {
     document.getElementById("intro").style.display = "none";
     document.getElementById("inhouse").style.display = "none";
     document.getElementById("mjs").style.display = "none";
@@ -61,13 +81,13 @@ function backToMenu(){
         offButter.style.display="inline";
     }
 }
-function defineOffset(avatar){
+let defineOffset = (avatar) => {
     console.log(avatar);
     if (avatar === 1){
     offOwl.style.display="none";
     offCat.addEventListener("click", () => {
-        y = 3;
-        console.log(y);
+        offset = 15;
+        console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
         cifrar.style.display="block";
@@ -76,8 +96,8 @@ function defineOffset(avatar){
         offParrot.style.display="none";
         });
      offButter.addEventListener("click", () => {
-        y = 5;
-        console.log(y);
+        offset = 21;
+        console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
         cifrar.style.display="block";
@@ -86,8 +106,8 @@ function defineOffset(avatar){
         offParrot.style.display="none";
         });
     offParrot.addEventListener("click", () => {
-        y = 7;
-        console.log(y);
+        offset = 12;
+        console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
         cifrar.style.display="block";
@@ -98,7 +118,8 @@ function defineOffset(avatar){
     } else if (avatar === 2){
     offCat.style.display="none";
     offOwl.addEventListener("click", () => {
-        y = 3;
+        offset = 15;
+        console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
         cifrar.style.display="block";
@@ -107,7 +128,8 @@ function defineOffset(avatar){
         offParrot.style.display="none";
         });
      offButter.addEventListener("click", () => {
-        y = 9;
+        offset = 9;
+        console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
         cifrar.style.display="block";
@@ -116,7 +138,8 @@ function defineOffset(avatar){
         offParrot.style.display="none";
         });
     offParrot.addEventListener("click", () => {
-        y = 4;
+        offset = 38;
+        console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
         cifrar.style.display="block";
@@ -127,7 +150,8 @@ function defineOffset(avatar){
     } else if (avatar === 3){
     offButter.style.display="none";
     offOwl.addEventListener("click", () => {
-        y = 5;
+        offset = 21;
+        console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
         cifrar.style.display="block";
@@ -136,7 +160,8 @@ function defineOffset(avatar){
         offParrot.style.display="none";
         });
      offCat.addEventListener("click", () => {
-        y = 9;
+        offset = 9;
+        console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
         cifrar.style.display="block";
@@ -145,7 +170,8 @@ function defineOffset(avatar){
         offParrot.style.display="none";
         });
     offParrot.addEventListener("click", () => {
-        y = 6;
+        offset = 33;
+        console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
         cifrar.style.display="block";
@@ -156,7 +182,8 @@ function defineOffset(avatar){
 } else if (avatar === 4){
     offParrot.style.display="none";
     offOwl.addEventListener("click", () => {
-        y = 7;
+        offset = 12;
+        console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
         cifrar.style.display="block";
@@ -165,7 +192,8 @@ function defineOffset(avatar){
         offButter.style.display="none";
         });
      offCat.addEventListener("click", () => {
-        y = 4;
+        offset = 38;
+        console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
         cifrar.style.display="block";
@@ -174,7 +202,8 @@ function defineOffset(avatar){
         offButter.style.display="none";
         });
     offButter.addEventListener("click", () => {
-        y = 6;
+        offset = 33;
+        console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
         cifrar.style.display="block";
@@ -182,10 +211,10 @@ function defineOffset(avatar){
         offOwl.style.display="none";
         offCat.style.display="none";
         });
-        return y;
+        return offset;
     }
 }
-function codeScreen(){
+let codeScreen = () => {
     cifrar.value = "Cifrar";
     document.getElementById("menu").style.display = "none";
     document.getElementById("mjs").style.display = "block";
@@ -193,12 +222,18 @@ function codeScreen(){
     document.getElementById("paraCifrar").placeholder = "Escribe aquí tu mensaje sin usar acentos ni la letra ñ";
     document.getElementById("result").placeholder = "Aquí se mostrará tu mensaje descifrado";
     cifrar.addEventListener("click", () => {
-        let x = document.getElementById("paraCifrar").value;
-        console.log(y);
-        document.getElementById("result").innerHTML = window.cipher.encode(x, y);
-    });  
- }
-function decodeScreen(){
+        let message = document.getElementById("paraCifrar").value;
+        console.log(offset);
+        document.getElementById("result").innerHTML = window.cipher.encode(offset, message);
+    });
+    copiar.addEventListener("click", () => {
+            const copT = document.getElementById("result");
+            copT.select();
+            document.execCommand("copy");
+            alert("Copied the text: " + copT.value); 
+    });
+}  
+let decodeScreen = () => {
     cifrar.value = "Descifrar";
     document.getElementById("menu").style.display = "none";
     document.getElementById("mjs").style.display = "block";
@@ -206,10 +241,16 @@ function decodeScreen(){
     document.getElementById("paraCifrar").placeholder = "Escribe aquí tu mensaje cifrado";
     document.getElementById("result").placeholder = "Aquí se mostrará tu mensaje descifrado";
     cifrar.addEventListener("click", () => {
-        let x = document.getElementById("paraCifrar").value;
-        console.log(y);
-        document.getElementById("result").innerHTML = window.cipher.decode(x, y);
+        let message = document.getElementById("paraCifrar").value;
+        console.log(offset);
+        document.getElementById("result").innerHTML = window.cipher.decode(offset, message);
     });  
+    copiar.addEventListener("click", () => {
+        const copT = document.getElementById("result");
+        copT.select();
+        document.execCommand("copy");
+        alert("Copied the text: " + copT.value); 
+});
 }
 
 document.getElementById("owl").addEventListener("click", owlAvatar);
@@ -222,23 +263,5 @@ document.getElementById("decodeScreen").addEventListener("click", decodeScreen);
 document.getElementById("menuB").addEventListener("click", backToMenu);
 document.getElementById("menuB1").addEventListener("click", backToMenu);
 
-function addFriend(){
-    let friends = [];
-    document.getElementById("friendAdd").addEventListener("click", addF);
-    function addF(){
-    let name = document.getElementById("friendInvite").value;
-    friends.push({nombre: name, imagen:""});
-    if (friends.length === 3){
-        document.getElementById("friendAdd").disabled = true;
-    }
-    let li = document.createElement("li");
-    let node = document.createTextNode(name);
-    li.appendChild(node);
-    document.getElementById("friendList").appendChild(li);
-    //.getElementById("friendList").innerHTML ="Tus amigos:<br>" + document.getElementById("friendInvite").value + "</br>";
-    erase();
-    }
-    function erase(){
-    document.getElementById("friendInvite").value = " ";
-    }
- }
+
+

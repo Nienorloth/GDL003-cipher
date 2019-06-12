@@ -1,57 +1,57 @@
 
 window.cipher = {
-    encode: function(x, y){
+    encode: (offset, message) => {
         let arr = [];
-    for (let i = 0; i < x.length; i++) {
-        if (x.charCodeAt(i) === 32) {
+    for (let i = 0; i < message.length; i++) {
+        if (message.charCodeAt(i) === 32) {
         arr.push(" ");
-        } else if (x.charCodeAt(i) === 46){
+        } else if (message.charCodeAt(i) === 46){
         arr.push(".");
-        } else if (x.charCodeAt(i) === 44){
+        } else if (message.charCodeAt(i) === 44){
         arr.push(",");
-        } else if (x.charCodeAt(i) === 59){
+        } else if (message.charCodeAt(i) === 59){
         arr.push(";");
-        } else if (x.charCodeAt(i) === 58){
+        } else if (message.charCodeAt(i) === 58){
         arr.push(":");
-        } else if (x.charCodeAt(i) === 63){
+        } else if (message.charCodeAt(i) === 63){
         arr.push("?");
-        } else if (x.charCodeAt(i) === 33){
+        } else if (message.charCodeAt(i) === 33){
         arr.push("!");
-        } else if (x.charCodeAt(i) < 97) {
-        let asc =  (x.charCodeAt(i)- 65 + y)%26+65;  
+        } else if (message.charCodeAt(i) < 97) {
+        let asc =  (message.charCodeAt(i)- 65 + offset)%26+65;  
         arr.push(String.fromCharCode(asc));
-        } else if (x.charCodeAt(i) >= 97 ){
-        let asc = (x.charCodeAt(i)-97 + y)%26+97;
+        } else if (message.charCodeAt(i) >= 97 ){
+        let asc = (message.charCodeAt(i)-97 + offset)%26+97;
         arr.push(String.fromCharCode(asc));
         }
     } 
     let ciphered = arr.join("");
     return ciphered;
 },
-    decode: function(x,y){
+    decode: (offset, message) => {
         let arr = [];
-        for (let i = 0; i < x.length; i++) {
-            if (x.charCodeAt(i) === 32) {
+        for (let i = 0; i < message.length; i++) {
+            if (message.charCodeAt(i) === 32) {
             arr.push(" ");
-            } else if (x.charCodeAt(i) === 46){
+            } else if (message.charCodeAt(i) === 46){
             arr.push(".");
-            } else if (x.charCodeAt(i) === 44){
+            } else if (message.charCodeAt(i) === 44){
             arr.push(",");
-            } else if (x.charCodeAt(i) === 59){
+            } else if (message.charCodeAt(i) === 59){
             arr.push(";");
-            } else if (x.charCodeAt(i) === 58){
+            } else if (message.charCodeAt(i) === 58){
             arr.push(":");
-            } else if (x.charCodeAt(i) === 63){
+            } else if (message.charCodeAt(i) === 63){
             arr.push("?");
-            } else if (x.charCodeAt(i) === 33){
+            } else if (message.charCodeAt(i) === 33){
             arr.push("!");
-            } else if (x.charCodeAt(i) === 168){
+            } else if (message.charCodeAt(i) === 168){
             arr.push("¿");
-            } else if (x.charCodeAt(i) < 97) {
-            let asc =  (x.charCodeAt(i)- 65 - y)%26+65;  
+            } else if (message.charCodeAt(i) < 97) {
+            let asc =  (message.charCodeAt(i) + 65 - offset)%26 + 65;  
             arr.push(String.fromCharCode(asc));
-            } else if (x.charCodeAt(i) >= 97) {
-            let asc = (x.charCodeAt(i)- 97 - y)%26+97;
+            } else if (message.charCodeAt(i) >= 97) {
+            let asc = (message.charCodeAt(i) + 97 - offset)%26 + 97;
             arr.push(String.fromCharCode(asc));
             }
         }
