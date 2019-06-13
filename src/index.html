@@ -26,10 +26,11 @@
         <button id="decodeScreen" class="mainButtons">Descifrar un mensaje recibido</button>
       </div>
       <div id="inhouse" style="display:none"> <!-- Invitar amigos (asignar avatar a nombre de amigos para definir offset), img fondo interior casita-->
-          <h2 id="rules">Agrega un amigo y elige una identidad secreta para él. Puedes agregar uno o dos amigos. Tendrás un código secreto para cada uno de ellos.</h2>
-          <input id="friendInvite" type="text" placeholder="Escribe aquí el nombre de tu amigo">
+          <h2 id="rules">Escribe el nombre de un amigo en la caja de texto. Después elige un personaje para él y presiona el botón "Agregar amigo".</h2>
+          <ul id="friendList">Lista de amigos</ul>
+          <input id="friendInvite" type="text" placeholder="Escribe aquí el nombre">
           <input id="friendAdd" type="submit" class="friend" value="Agregar amigo">
-          <br>
+        <section id="inviteButtons"> 
           <input type="radio" name="friendPic" id="friend1">
           <label for="friend1"><img src="imagenes/owl.JPG" height="90px" width="105px"/></label>
           <input type="radio" name="friendPic" id="friend2">
@@ -38,7 +39,7 @@
           <label for="friend3"><img src="imagenes/mariposa.JPG" height="90px" width="105px"/></label>
           <input type="radio" name="friendPic" id="friend4">
           <label for="friend4"><img src="imagenes/loro.JPG" height="90px" width="105px"/></label>
-          <ul id="friendList"></ul>
+        </section>
         <footer> 
           <button id="menuB" class="menu">Volver al menú</button>
         </footer>

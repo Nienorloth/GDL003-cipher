@@ -9,6 +9,7 @@ const paraCifrar = document.getElementById("paraCifrar");
 const result = document.getElementById("result");
 const copiar = document.getElementById("copiar");
 
+
 let owlAvatar = () => {
     avatar = 1;
     defineOffset(1);
@@ -36,33 +37,46 @@ let parrotAvatar = () => {
 const inviteScreen = () => {
     document.getElementById("menu").style.display = "none";
     document.getElementById("inhouse").style.display = "block";
-    addFriend();
+    
     let addFriend = () => {
         let friends = [];
-        document.getElementById("friendAdd").addEventListener("click", addF);
         let addF = () => {
         let name = document.getElementById("friendInvite").value;
-        friends.push({nombre: name, imagen:""});
+        friends.push({nombre: name, imagen:"imagenes/gato.JPG"});
+        let imgF = () => {
+            let img = document.createElement("img");
+            img.setAttribute("src", "imagenes/gato.JPG");
+            img.setAttribute("width", "105");
+            img.setAttribute("height", "90");
+        }
+        imgF();
         if (friends.length === 3){
             document.getElementById("friendAdd").disabled = true;
         }
         let li = document.createElement("li");
-        let node = document.createTextNode(name);
+        let node = document.createTextNode(name,friends[0].imagen);
         li.appendChild(node);
         document.getElementById("friendList").appendChild(li);
         //.getElementById("friendList").innerHTML ="Tus amigos:<br>" + document.getElementById("friendInvite").value + "</br>";
         erase();
         }
+        document.getElementById("friendAdd").addEventListener("click", addF);
        let erase = () => {
         document.getElementById("friendInvite").value = " ";
         }
      }
+
+     addFriend();
 }
 let backToMenu = () => {
     document.getElementById("intro").style.display = "none";
     document.getElementById("inhouse").style.display = "none";
     document.getElementById("mjs").style.display = "none";
     document.getElementById("menu").style.display = "block";
+    paraCifrar.style.display="none";
+    result.style.display="none";
+    cifrar.style.display="none";
+    copiar.style.display="none";
     if (avatar === 1){
         offCat.style.display="inline";
         offButter.style.display="inline"; 
@@ -132,7 +146,7 @@ let defineOffset = (avatar) => {
         console.log(offset);
         paraCifrar.style.display="block";
         result.style.display="block";
-        cifrar.style.display="block";
+        cifrar.style.display="block";   
         copiar.style.display="block";
         offOwl.style.display="none";
         offParrot.style.display="none";
@@ -215,6 +229,7 @@ let defineOffset = (avatar) => {
     }
 }
 let codeScreen = () => {
+    defineOffset();
     cifrar.value = "Cifrar";
     document.getElementById("menu").style.display = "none";
     document.getElementById("mjs").style.display = "block";
@@ -262,6 +277,3 @@ document.getElementById("codeScreen").addEventListener("click", codeScreen);
 document.getElementById("decodeScreen").addEventListener("click", decodeScreen);
 document.getElementById("menuB").addEventListener("click", backToMenu);
 document.getElementById("menuB1").addEventListener("click", backToMenu);
-
-
-
