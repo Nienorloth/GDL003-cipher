@@ -18,10 +18,10 @@ window.cipher = {
         } else if (message.charCodeAt(i) === 33){
         arr.push("!");
         } else if (message.charCodeAt(i) < 97) {
-        let asc =  (message.charCodeAt(i)- 65 + offset)%26+65;  
+        let asc =  (message.charCodeAt(i) - 65 + offset)%26+65;  
         arr.push(String.fromCharCode(asc));
         } else if (message.charCodeAt(i) >= 97 ){
-        let asc = (message.charCodeAt(i)-97 + offset)%26+97;
+        let asc = (message.charCodeAt(i) - 97 + offset)%26+97;
         arr.push(String.fromCharCode(asc));
         }
     } 
@@ -51,7 +51,7 @@ window.cipher = {
             let asc =  (message.charCodeAt(i) + 65 - offset)%26 + 65;  
             arr.push(String.fromCharCode(asc));
             } else if (message.charCodeAt(i) >= 97) {
-            let asc = (message.charCodeAt(i) + 97 - offset)%26 + 97;
+            let asc = (message.charCodeAt(i) + 97 - offset)%26 + 97 + 14;
             arr.push(String.fromCharCode(asc));
             }
         }

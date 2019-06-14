@@ -6,14 +6,18 @@
     padding: 30px;
     margin: auto;
     margin-top: 10px;
-    background-image: url("imagenes/wood2.jpg");
+    background-image: url("imagenes/wood4.png");
     background-repeat: no-repeat;
-    background-position: relative;
+    background-position: absolute;
     background-position-x: center;
+    background-position-y: 35px;
+    background-size: 72%;
+    font-family: fantasy;
+    color: #1D7D2D;
 }
 .welcome{
     position: relative;
-    bottom: 80px;
+    bottom: 100px;
 }
 #choose{
     position: relative;
@@ -21,17 +25,13 @@
 }
 #introInvite{
     position: relative;
-}
-#introWelcome{
-    position: relative;
-    top: 30px;
+    top: 55px;
+    text-align: center;
 }
 #introText{
     padding: 2px;
     margin: 0 auto;
     border: auto;
-    border-width: 1px;
-    border-color: black;
 }
 #offset{
     text-align: center;
@@ -64,15 +64,15 @@ textarea{
     left: 50px;
     top: 15px;
     width: 350px;
-    height:300px;
+    height:310px;
     padding: 15px;
-    bottom: 20px;
+    bottom: 10px;
     border-style: inset;
     text-align: center;
     background: rgba(92, 80, 80, 0.5);
-    font-size: 30px;
+    font-size: 35px;
     color: white;
-    line-height: 55px;
+    line-height: 45px;
 
 }
 #friendInvite{
@@ -90,17 +90,17 @@ textarea{
     bottom: 5px;
 }
 #friendList{
-    width: 390px;
-    height: 482px;
+    width: 560px;
+    height: 552px;
     position: absolute;
-    bottom: 40px;
-    left: 620px;
+    top: 1px;
+    left: 480px;
     border-style: inset;
     background: rgba(92, 80, 80, 0.5);
     color: white;
     font-size: 40px;
     font-weight: bold;
-    line-height: 75px;
+    line-height: 95px;
 }
 #menu{
     width: 1350px;
@@ -120,6 +120,9 @@ textarea{
     border-style: groove;
     border-width: 7px;
     border-color: rgb(192, 101, 68);
+}
+.mainButtons:hover {
+background: #579210;
 }
 #inviteScreen{
     position: relative;
@@ -148,8 +151,23 @@ textarea{
 #inviteButtons{
     position: absolute;
     left: 30px;
-    bottom: 40px;
+    bottom: 30px;
 }
 #mjs{
     background-image: url("imagenes/clouds.png");
+    backgroun-repeat: no-repeat;
+}
+#forFriendList{
+    position:absolute;
+    left: 810px;
+    top: 235px;
+    line-height: 75px;
+    width: 120px;
+}
+#changeId{
+    position: absolute;
+    bottom: 190px;
+    left: 5px;
+    width: 180px;
+    height: 100px;
 }

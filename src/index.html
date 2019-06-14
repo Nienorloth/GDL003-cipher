@@ -8,10 +8,13 @@
   <body>
       <div id="intro" style="display:block"><!--Aquí se elegirá un avatar, solo se mostrará una vez, antes de pantalla de menu. Hacker ed: insertar animación -->
         <div class="welcome">
+            <audio src="http://www.ffmages.com/ffvii/ost/disc-3/04-descendant-of-shinobi.mp3" type="audio/mpeg" id="music">
+            </audio>
           <section id="introText">
-            <h2 id="introWelcome">Bienvenido a tu club secreto</h2> 
-            <h3 id="introInvite">¡Invita amigos para enviarse mensajes secretos con códigos personalizados para cada uno de ellos!</h3>
-            <h1 id="choose">Elige tu identidad secreta</h1>
+            <h3 id="introInvite">Bienvenido a tu club secreto<br>¡Invita amigos y dales identidades secretas para enviarse mensajes cifrados!</h3>
+          </section>
+          <section id="choose">
+            <h1>Elige tu identidad secreta</h1>
             <button id="owl" class="animals"><img id="owlPic" src="imagenes/owl.JPG" height="115px" width="130px"/></button>
             <button id="cat" class="animals"><img id= "catPic" src="imagenes/gato.JPG" height="115px" width="130px"/></button>
             <button id="butter" class="animals"><img id= "butterPic" src="imagenes/mariposa.JPG" height="115px" width="130px"/></button>
@@ -26,22 +29,21 @@
         <button id="decodeScreen" class="mainButtons">Descifrar un mensaje recibido</button>
       </div>
       <div id="inhouse" style="display:none"> <!-- Invitar amigos (asignar avatar a nombre de amigos para definir offset), img fondo interior casita-->
-          <h2 id="rules">Escribe el nombre de un amigo en la caja de texto. Después elige un personaje para él y presiona el botón "Agregar amigo".</h2>
-          <ul id="friendList">Lista de amigos</ul>
+          <h2 id="rules">Escribe el nombre de un amigo en la caja de texto. Después selecciona la imagen del personaje para él y presiona el botón "Agregar amigo".</h2>
+          <ul id="friendList">Tú eres:  <span id="yourId"></span><li>Lista de amigos</li>  </ul>
           <input id="friendInvite" type="text" placeholder="Escribe aquí el nombre">
           <input id="friendAdd" type="submit" class="friend" value="Agregar amigo">
         <section id="inviteButtons"> 
-          <input type="radio" name="friendPic" id="friend1">
-          <label for="friend1"><img src="imagenes/owl.JPG" height="90px" width="105px"/></label>
-          <input type="radio" name="friendPic" id="friend2">
-          <label for="friend2"><img src="imagenes/gato.JPG" height="90px" width="105px"/></label>
-          <input type="radio" name="friendPic" id="friend3">
-          <label for="friend3"><img src="imagenes/mariposa.JPG" height="90px" width="105px"/></label>
-          <input type="radio" name="friendPic" id="friend4">
-          <label for="friend4"><img src="imagenes/loro.JPG" height="90px" width="105px"/></label>
+          <button class="friendPic" id="friend1" value="owl"><img src="imagenes/owl.JPG" height="90px" width="105px"/></button>
+          <button class="friendPic" id="friend2" value="cat"><img src="imagenes/gato.JPG" height="90px" width="105px"/></button>
+          <button class="friendPic" id="friend3" value="butterfly"><img src="imagenes/mariposa.JPG" height="90px" width="105px"/></button>
+          <button class="friendPic" id="friend4" value="parrot"><img src="imagenes/loro.JPG" height="90px" width="105px"/></button>
+        </section>
+        <section id="forFriendList">
         </section>
         <footer> 
           <button id="menuB" class="menu">Volver al menú</button>
+          <button id="changeId" class="menu">Cambiar tu identidad secreta</button>
         </footer>
       </div>
       <div id="mjs" style="display:none"><!-- pantalla para elegir avatar de amigo (offset), codificar y decodificar msjs -->
