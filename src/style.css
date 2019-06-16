@@ -122,7 +122,8 @@ textarea{
     border-color: rgb(192, 101, 68);
 }
 .mainButtons:hover {
-background: #579210;
+    background: #b0f4e6;
+    color: black;
 }
 #inviteScreen{
     position: relative;

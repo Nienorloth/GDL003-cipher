@@ -9,6 +9,7 @@ const paraCifrar = document.getElementById("paraCifrar");
 const result = document.getElementById("result");
 const copiar = document.getElementById("copiar");
 const music = document.getElementById("music");
+
 const music1 = () => {
     music.play();
   };
@@ -324,6 +325,7 @@ let decodeScreen = () => {
         alert("Copied the text: " + copT.value); 
 });
 };
+
 document.getElementById("owl").addEventListener("click", owlAvatar);
 document.getElementById("cat").addEventListener("click", catAvatar);
 document.getElementById("butter").addEventListener("click", butterAvatar);
